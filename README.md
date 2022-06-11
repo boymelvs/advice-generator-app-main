@@ -29,11 +29,11 @@ Your users should be able to:
 
 ### Screenshot
 
-![Interactive rating component solution](./design/desktop-design.jpg)
+![Advice generator app](./design/desktop-design.jpg)
 
 ### Links
 
--  Live Site URL: [Crowdfunding product page solution](https://boymelvs.github.io/advice-generator-app-main)
+-  Live Site URL: [Advice generator app](https://boymelvs.github.io/advice-generator-app-main)
 
 ### Built with
 
