@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   /* primary colors */
+   --light-cyan: hsl(193, 38%, 86%);
+   --neon-green: hsl(150, 100%, 66%);
+
+   /* neutral colors */
+   --grayish-blue: hsl(217, 19%, 38%);
+   --dark-grayish-blue: hsl(217, 19%, 24%);
+   --dark-blue: hsl(218, 23%, 16%);
+
+   /* font */
+   --font-fam-manrope: "Manrope", sans-serif;
+   --font-fam-spacemono: " Space Mono", monospace;
+   --font-size-10: 62.5%; /* 10px */
+   --font-weight-400: 400;
+   --font-weight-800: 800;
+}
+
+html {
+   font-size: var(--font-size-10);
+   font-family: var(--font-fam-manrope);
+   scroll-behavior: smooth;
+   font-weight: var(--font-weight-400);
+}
+
+body {
+   background: var(--dark-blue);
+}
+
+footer {
+   font-family: var(--font-fam-spacemono);
+   font-size: 1.2rem;
+   padding: 1.5rem 0;
+   text-align: center;
+   color: var(--light-cyan);
+}
+
+footer a {
+   text-decoration: none;
+   color: var(--light-cyan);
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 4rem;
+
+   min-width: 32rem;
+   min-height: 100vh;
+   padding: 1rem;
+}
+
+.main_content {
+   display: flex;
+   align-items: center;
+   max-width: 45rem;
+   background: var(--dark-grayish-blue);
+   border-radius: 1.5rem;
+   padding: 2.5rem 2.5rem 0 2.5rem;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2.5rem;
+   font-weight: var(--font-weight-800);
+}
+
+.advice_num {
+   text-transform: uppercase;
+   letter-spacing: 0.5rem;
+   color: var(--neon-green);
+}
+
+.advice_text {
+   text-align: center;
+   color: var(--light-cyan);
+   font-size: 2.8rem;
+   z-index: 1;
+}
+
+.btn_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   justify-content: center;
+   width: 100%;
+
+   position: relative;
+}
+
+.divider {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+@media (min-width: 120px) and (max-width: 599px) {
+   .divider {
+      background-image: url("../images/pattern-divider-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 4rem;
+   }
+}
+
+@media (min-width: 600px) {
+   .divider {
+      background-image: url("../images/pattern-divider-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 4rem;
+   }
+}
+
+.submit_btn {
+   margin-bottom: -2.5rem;
+   display: flex;
+   border-radius: 50%;
+   padding: 1.5rem;
+   border: none;
+   background: var(--neon-green);
+}
+
+.submit_btn.active {
+   animation: spin 1500ms infinite ease;
+}
+
+.submit_btn:hover {
+   box-shadow: 0 0 2rem var(--neon-green);
+   cursor: pointer;
+}
+
+.warning {
+   display: none;
+   position: absolute;
+   top: -3.5rem;
+   text-align: center;
+   width: 100%;
+}
+
+.submit_btn:hover ~ .warning {
+   display: block;
+   font-weight: var(--font-weight-400);
+   color: var(--neon-green);
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
